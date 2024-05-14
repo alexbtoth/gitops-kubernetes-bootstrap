@@ -1,7 +1,7 @@
 # Global
 ## Set the domain to create nginx for argocd and other service ingress
-domain: 
-## Set local if you wish to start the local path provisioner for "local-path" in your cluster 
+domain:
+## Set local if you wish to start the local path provisioner for "local-path" in your cluster
 storage:
   local:
     enable: true
@@ -9,8 +9,6 @@ storage:
 githubactionsrunner:
   enable: false
   token: ""
-cats:
-  storageClass: "local-path"
 observability:
   storageClass: "local-path"
   pdkey:
@@ -21,6 +19,6 @@ trivy:
 logging:
   enable: true
 metallb:
-# This only passes through to the bootstrap resources a single address pool, 
-# you can use a range if you you want to do something more complex
+  # This only passes through to the bootstrap resources a single address pool,
+  # you can use a range if you you want to do something more complex
   addresspool: 192.168.88.70/24
